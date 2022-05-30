@@ -1,23 +1,27 @@
 import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GifsGrid } from "./components/GifsGrid";
 
 export const GifApp = () => {
 
-  const [categorias, setcategorias] = useState(['PHP','JS'])
+  const [categorias, setcategorias] = useState([])
 
   /* const agregarCategoria = () => {
-    setcategorias([...categorias,'TEST'])
+    setcategorias( categorias => [...categorias,'TEST'])
   } */
 
   return (
       <>
           <h2>GifApp</h2>
           <hr/>
-            <AddCategory></AddCategory>
+            <AddCategory setcategorias={setcategorias}></AddCategory>
             <ol>
               {
                 categorias.map( categoria => {
-                  return <li key={categoria}> {categoria} </li>
+                  return <GifsGrid 
+                            key={categoria}
+                            categoria={categoria}>
+                          </GifsGrid>
                 })
               }
             </ol>
