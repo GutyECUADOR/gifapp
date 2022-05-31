@@ -6,10 +6,6 @@ export const GifApp = () => {
 
   const [categorias, setcategorias] = useState([])
 
-  /* const agregarCategoria = () => {
-    setcategorias( categorias => [...categorias,'TEST'])
-  } */
-
   return (
       <>
           <h2>GifApp</h2>

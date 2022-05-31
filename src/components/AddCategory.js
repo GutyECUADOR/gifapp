@@ -9,7 +9,6 @@ export const AddCategory = ( {setcategorias}) => {
     }
     const handleSubmit = (e) => {
       e.preventDefault()
-      console.log('submit')
       setcategorias( categorias => [nuevaCategoria, ...categorias])
     }
 
